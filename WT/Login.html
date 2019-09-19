@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <style>
+        body {
+            /* background: url("https://png.pngtree.com/thumb_back/fh260/back_pic/00/04/82/235624ffcf6f868.jpg"); */
+            background-size: cover;
+            background: #3498db;
+            margin: 10% 0px 0px 40%;
+        }
+
+        div.login {
+            background: white;
+            width: 300px;
+            height: 220px;
+            border-radius: 6px;
+            margin: 0 auto 0 auto;
+            padding: 0px 0px 0px 0px;
+            border: #2980b9 4px solid;
+            text-align: center;
+            position: relative;
+            align-items: center;
+            display: table-cell;
+            vertical-align: middle;
+            border: 3px solid #f1f1f1;
+        }
+
+        input {
+            border-radius: 25px;
+            padding: 1%;
+        }
+
+        input.input-text {
+            background: #ecf0f1;
+            border: #ccc 1px solid;
+            border-bottom: #ccc 2px solid;
+            padding: 8px;
+            width: 250px;
+            color: #AAAAAA;
+            margin-top: 10px;
+            font-size: 1em;
+            border-radius: 4px;
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            background-color: #27ae60;
+            border-radius: 20px;
+            width: 40%;
+            height: 40%;
+            font-weight: 800;
+            font-size: 0.8em;
+        }
+
+        input[type=reset] {
+            color: red;
+        }
+
+        div#error {
+            color: red;
+            visibility: hidden;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body>
+    <form name="login" method="POST" action="http://nokia.com">
+        <div class="login">
+            <div>
+                <input type="email" name="name" class="input-text" placeholder="Username" required />
+            </div>
+            <br>
+            <br>
+            <div>
+                <input type="password" name="pass" class="input-text" placeholder="Password" required />
+            </div>
+            <br>
+            <br>
+            <div>
+                <label><input type="checkbox" name="checkbox" value="value">Remember Me</label>
+            </div>
+            <br>
+            <br>
+            <div>
+                <input type="submit" name="Sign In" value="Sign In" />
+                <input type="reset" name="reset" value="Reset" />
+            </div>
+            <div id="error"></div>
+        </div>
+    </form>
+    <script>
+        document.forms.login.onsubmit = () => {
+            const password = document.getElementsByName("pass")[0].value;
+            const name = document.getElementsByName("name")[0].value;
+            const error = document.getElementById("error");
+            if (password === "" || password.length < 10) {
+                error.style.visibility = "visible";
+                error.innerText = "Password Length must be 10 Minimum";
+                document.getElementsByName("pass")[0].style.border = "1px solid red";
+                document.getElementsByName("name")[0].style.border = "1px solid black";
+                return false;
+            }
+            if (name === "" || name.length < 10) {
+                error.style.visibility = "visible";
+                error.innerText = "Username Length must be 10 Minimum";
+                document.getElementsByName("name")[0].style.border = "1px solid red";
+                document.getElementsByName("pass")[0].style.border = "1px solid black";
+                return false;
+            }
+            error.style.visibility = "hidden";
+            return true;
+        }
+    </script>
+</body>
+
+</html>

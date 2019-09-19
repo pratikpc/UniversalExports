@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<style>
+		body {
+			background: url("data:image/jpeg;base64,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");
+			background-size: cover;
+		}
+
+		a:visited {
+			color: green;
+		}
+
+		a:link {
+			color: green;
+		}
+
+		.edu {
+			border-collapse: collapse;
+			border: 1px solid orange;
+			overflow-x: auto;
+			table-layout: fixed;
+			width: 60%;
+			column-width: 5%;
+			float: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		table {
+			align-content: center;
+			margin: 0 auto;
+		}
+
+		td.edu,
+		th.edu {
+			border-left: 1px solid #000;
+			border: 1px solid orange;
+		}
+
+		tr:hover {
+			background-color: #f5f5f5;
+		}
+
+		ul {
+			list-style-position: inside;
+		}
+
+		div.image {
+			width: 100%;
+			height: 100%;
+		}
+
+		div.image img {
+			-webkit-transition: all 1s ease;
+			/* Safari and Chrome */
+			-moz-transition: all 1s ease;
+			/* Firefox */
+			-ms-transition: all 1s ease;
+			/* IE 9 */
+			-o-transition: all 1s ease;
+			/* Opera */
+			transition: all 1s ease;
+		}
+
+		div.image:hover img {
+			-webkit-transform: scale(1.25);
+			/* Safari and Chrome */
+			-moz-transform: scale(1.25);
+			/* Firefox */
+			-ms-transform: scale(1.25);
+			/* IE 9 */
+			-o-transform: scale(1.25);
+			/* Opera */
+			transform: scale(1.25);
+		}
+	</style>
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+		.info {
+			text-align: center;
+		}
+	</style>
+
+	<style>
+		/* Fixed sidenav, full height */
+
+		.sidenav {
+			height: 100%;
+			width: 15%;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			padding-top: 20px;
+		}
+
+		/* Style the sidenav links and the dropdown button */
+
+		.sidenav a,
+		.dropdown-btn {
+			padding: 6px 8px 6px 16px;
+			text-decoration: none;
+			font-size: 20px;
+			color: #818181;
+			display: block;
+			border: none;
+			background: none;
+			width: 100%;
+			text-align: left;
+			cursor: pointer;
+			outline: none;
+		}
+
+		/* On mouse-over */
+
+		.sidenav a:hover,
+		.dropdown-btn:hover {
+			color: #f1f1f1;
+		}
+
+		/* Main content */
+
+		.main {
+			margin-left: 30%;
+			/* Same as the width of the sidenav */
+			font-size: 20px;
+			/* Increased text to enable scrolling */
+			padding: 0% 10%;
+		}
+
+		/* Add an active class to the active dropdown button */
+
+		.active {
+			background-color: green;
+			color: white;
+		}
+
+		/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+		.dropdown-container {
+			display: none;
+			background-color: #262626;
+			padding-left: 8px;
+		}
+
+		/* Optional: Style the caret down icon */
+
+		.fa-caret-down {
+			float: right;
+			padding-right: 8px;
+		}
+
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>Resume</title>
+</head>
+
+<body>
+	<p>
+		<h1 align="center">RESUME</h1>
+	</p>
+
+	<div class="sidenav">
+		<ul class="main-nav" id="js-menu">
+			<li>
+				<img src="me.jpeg" width="100%" height="100%" align="center" class="center">
+			</li>
+			<li>
+				<a href="#" class="nav-links">Education</a>
+			</li>
+			<li>
+				<a href="#" class="nav-links">Skillset</a>
+			</li>
+			<li>
+				<a href="#achieve" class="nav-links">Achievements</a>
+			</li>
+			<li>
+				<a href="#created" class="nav-links">Creations</a>
+			</li>
+			<li>
+				<a href="#contact" class="nav-links">Contact</a>
+			</li>
+		</ul>
+	</div>
+	<br>
+	<br>
+	<div id="education">
+		<h3 align="center">
+			<u>EDUCATION</u>
+		</h3>
+		<table align="center" class="edu">
+			<tr>
+				<th class="edu">
+					<b>COURSE</b>
+				</th>
+				<th class="edu">
+					<b>INSTIUTION</b>
+				</th>
+			</tr>
+			<tr align="center">
+				<td class="edu">College</b>
+				</td>
+				<td class="edu">
+					<a href="http://frcrce.ac.in">FrCRCE</a>
+				</td>
+			</tr>
+			<tr align="center">
+				<td class="edu">XII</b>
+				</td>
+				<td class="edu"><a href="dpskolkata.com">DPS</a></td>
+			</tr>
+			<tr align="center">
+				<td class="edu">X</b>
+				</td>
+				<td class="edu"><a href="dpskolkata.com">DPS</a></td>
+			</tr>
+		</table>
+	</div>
+	<div id="skill">
+		<h3 align="center">
+			<u>TECHNICAl SKILLSET</u>
+		</h3>
+		<div class="info">
+			<ul class="info">
+				<li>Machine Learning</li>
+				<li>NLP (Natural Language Processing)</li>
+				<li>C++</li>
+				<li>Node.JS based Backend Development</li>
+				<li>Java</li>
+				<li>Python</li>
+				<li>TypeScript</li>
+			</ul>
+		</div>
+	</div>
+	<br>
+	<div id="achieve">
+		<h3 align="center">
+			<u>ACHIEVEMENTs</u>
+		</h3>
+		<div class="info">
+			<ul>
+				<li>Winner of Smart India Hackathon 2019</li>
+			</ul>
+		</div>
+	</div>
+	<br>
+	<div id="created">
+		<h3 align="center">
+			<u>CREATIONS</u>
+		</h3>
+		<div class="info">
+			<ul>
+				<li>
+					Smart Monitor IoT Project
+				</li>
+				<li>
+					Context Based Chatbot using User Profiling
+				</li>
+				<li>
+					Presenting Obstacles Around an Aerodrome
+				</li>
+			</ul>
+		</div>
+	</div>
+	<br>
+	<div id="contact" align="center">
+		<h3 align="center">
+			<u>CONTACT ME</u>
+		</h3>
+		Pratik Chowdhury (<a href="mailto:pratikc@live.co.uk">pratikc@live.co.uk</a>)
+		<br>
+		<a href="https://www.linkedin.com/in/pratik-chowdhury-889bb2183/">My LinkedIn Profile</a>
+		<br> Student
+		<br>
+		<a href="https://frcrce.ac.in">FrCRCE</a>
+		<br>
+	</div>
+</body>
+
+</html>

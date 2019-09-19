@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Hospital Form</title>
+    <style>
+        tr#illness_details {
+            display: none;
+        }
+
+        table {
+            float: center;
+            align-items: center;
+            column-width: 5%;
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="GET" name="hospital" action="nokia.com" onsubmit="return Validate();">
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name</label>
+                </td>
+                <td>
+                    <input type="text" name="name" class="input-text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mail">Mail</label>
+                </td>
+                <td>
+                    <input type="email" name="mail" class="input-text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="rank">Rank</label>
+                </td>
+                <td>
+                    <input type="text" name="rank" class="input-text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="company">Company</label>
+                </td>
+                <td>
+                    <input type="text" name="company" required class="input-text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of Birth</label>
+                </td>
+                <td>
+                    <input type="date" name="date" class="input-text" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">Phone Number</label>
+                </td>
+                <td>
+                    <input type="tel" name="phone" pattern="/^[1-9]{1}[0-9]{9}$/" class="input-text" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ill"> Are you Ill? </label>
+                    <div>
+                        <input type="radio" name="ill" value="yes" class="input-text" onclick="IllnessEnabled();" required />
+                        <label for="illness"> Yes </label>
+                    </div>
+                    <div>
+                        <input type="radio" checked name="ill" value="no" class="input-text" onclick="IllnessEnabled();" required/>
+                        <label for="illness"> No </label>
+                    </div>
+                </td>
+            </tr>
+            <tr id="illness_details">
+                <td>
+                    <label for="illness"> If yes, what's the illness? </label>
+                </td>
+                <td>
+                    <input type="text" name="illness" class="input-text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="upload">
+                        <label for="image">Upload Image</label>
+                </td>
+                <td>
+                    <input type="file" name="image" value="image" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <input type="submit" name="done" value="Contact Us" />
+                        <input type="reset" name="reset" value="Reset Form" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function Validate() {
+            // let phone = document.forms.hospital.phone;
+            // //let validated = (.test(phone.value));
+            // if (!validated) {
+            //     phone.value = "";
+            //     phone.style.border = "1px solid red";
+            // }
+            // let mail = document.forms.hospital.mail;
+            // if 
+            // return validated;
+            return true;
+        }
+        function ValidatePhone(){
+
+        }
+        function IllnessEnabled() {
+            let selected = document.querySelector('input[name="ill"]:checked').value;
+            if (selected === "yes")
+                document.getElementById("illness_details").style.display = "inline";
+            else
+                document.getElementById("illness_details").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
